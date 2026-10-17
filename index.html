@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Дмитрий и Дарья — Приглашение на свадьбу · 5 декабря 2026</title>
+<meta name="description" content="Приглашение на свадьбу Дмитрия и Дарьи — 5 декабря 2026, Усадьба Масловых, с. Фомино">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%2334503F'/%3E%3Ctext x='50' y='66' font-size='46' text-anchor='middle' fill='%23F4EDE1' font-family='Georgia,serif'%3E%D0%94%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marck+Script&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF7EF;
+    --beige:#F2EADB;
+    --beige-2:#E7DBC6;
+    --green:#34503F;
+    --green-deep:#22362B;
+    --green-soft:#7C9A7E;
+    --red:#8E2F3C;
+    --red-soft:#A94953;
+    --gold:#B99A5B;
+    --ink:#2E2B25;
+    --font-head:'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body:'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --font-script:'Marck Script', 'Segoe Script', cursive;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family:var(--font-body);
+    background:var(--beige);
+    color:var(--ink);
+    font-size:19px;
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+  body.locked{ overflow:hidden; height:100vh; }
+
+  ::selection{ background:var(--green); color:var(--cream); }
+
+  /* ---------- снежинки ---------- */
+  #snow{
+    position:fixed; inset:0;
+    width:100%; height:100%;
+    pointer-events:none;
+    z-index:60;
+  }
+
+  /* ---------- заставка ---------- */
+  #intro{
+    position:fixed; inset:0;
+    z-index:90;
+    background:
+      radial-gradient(ellipse at 50% 40%, #FBF7EF 0%, #F2EADB 55%, #E7DBC6 100%);
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    transition:opacity 1s ease, visibility 1s;
+  }
+  #intro.hidden{ opacity:0; visibility:hidden; }
+  #intro .inner{
+    position:relative;
+    padding:48px 28px;
+    max-width:520px;
+    animation:introIn 1.6s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes introIn{
+    from{ opacity:0; transform:translateY(26px); }
+    to{ opacity:1; transform:none; }
+  }
+  .intro-corner{
+    position:absolute; width:150px; color:var(--green); opacity:.85;
+  }
+  .intro-corner.tl{ top:-118px; left:-88px; transform:rotate(-14deg); }
+  .intro-corner.tr{ top:-118px; right:-88px; transform:scaleX(-1) rotate(-14deg); }
+  .intro-corner.bl{ bottom:-118px; left:-88px; transform:scaleY(-1) rotate(-14deg); }
+  .intro-corner.br{ bottom:-118px; right:-88px; transform:scale(-1) rotate(-14deg); }
+
+  .eyebrow{
+    font-family:var(--font-head);
+    text-transform:uppercase;
+    letter-spacing:.42em;
+    font-size:.72rem;
+    color:var(--red);
+    margin-bottom:22px;
+  }
+
+  .monogram{
+    width:132px; height:132px; margin:0 auto 26px;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+    background:rgba(251,247,239,.6);
+    box-shadow:0 0 0 7px rgba(251,247,239,.6), 0 0 0 8px rgba(185,154,91,.35);
+    font-family:var(--font-head);
+    font-size:2.3rem; color:var(--green);
+    letter-spacing:.06em;
+  }
+  .monogram span{ color:var(--red); font-style:italic; margin:0 4px; }
+
+  .intro-names{
+    font-family:var(--font-head);
+    font-size:2.05rem; font-weight:500;
+    color:var(--green-deep);
+    line-height:1.3;
+    margin-bottom:10px;
+  }
+  .intro-date{
+    font-family:var(--font-head);
+    letter-spacing:.3em;
+    text-transform:uppercase;
+    font-size:.85rem;
+    color:var(--red);
+    margin-bottom:34px;
+  }
+
+  .btn{
+    display:inline-block;
+    font-family:var(--font-head);
+    font-size:.95rem;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--cream);
+    background:var(--green);
+    border:1px solid var(--green);
+    padding:16px 38px;
+    cursor:pointer;
+    text-decoration:none;
+    position:relative;
+    transition:background .35s, color .35s, transform .35s;
+  }
+  .btn:hover{ background:var(--red); border-color:var(--red); transform:translateY(-2px); }
+  .btn.ghost{
+    background:transparent; color:var(--green);
+    border:1px solid var(--green);
+  }
+  .btn.ghost:hover{ background:var(--green); color:var(--cream); }
+  .btn.light{
+    background:var(--cream); color:var(--green-deep);
+    border-color:var(--cream);
+  }
+  .btn.light:hover{ background:var(--gold); border-color:var(--gold); color:var(--green-deep); }
+
+  /* ---------- общий вид ---------- */
+  #snowflakeDefs{ position:absolute; width:0; height:0; overflow:hidden; }
+
+  main{ position:relative; z-index:1; }
+
+  section{ padding:88px 22px; position:relative; }
+  .wrap{ max-width:760px; margin:0 auto; position:relative; }
+
+  .bg-cream{ background:var(--cream); }
+  .bg-beige{ background:var(--beige); }
+  .bg-green{ background:var(--green-deep); color:var(--cream); }
+  .bg-red{ background:var(--red); color:var(--cream); }
+
+  .orn{
+    display:block; margin:0 auto;
+    color:var(--gold);
+  }
+
+  .divider{ display:block; width:240px; max-width:70vw; margin:26px auto; color:var(--gold); }
+
+  h2{
+    font-family:var(--font-head);
+    font-weight:500;
+    font-size:2rem;
+    color:var(--green);
+    text-align:center;
+    letter-spacing:.04em;
+  }
+  .bg-green h2, .bg-red h2{ color:var(--cream); }
+
+  .kicker{
+    display:block;
+    font-family:var(--font-head);
+    text-transform:uppercase;
+    letter-spacing:.4em;
+    font-size:.68rem;
+    color:var(--red);
+    text-align:center;
+    margin-bottom:14px;
+  }
+  .bg-green .kicker, .bg-red .kicker{ color:rgba(251,247,239,.75); }
+
+  .lead{
+    text-align:center;
+    font-size:1.18rem;
+    max-width:620px;
+    margin:0 auto;
+  }
+  .bg-green .lead, .bg-red .lead{ color:rgba(251,247,239,.92); }
+
+  .script{
+    font-family:var(--font-script);
+    font-size:1.7rem;
+    color:var(--red);
+    text-align:center;
+    line-height:1.5;
+  }
+  .bg-green .script, .bg-red .script{ color:#E8C9A0; }
+
+  /* появление при прокрутке */
+  .reveal{ opacity:0; transform:translateY(30px); transition:opacity 1s ease, transform 1s cubic-bezier(.2,.7,.3,1); }
+  .reveal.visible{ opacity:1; transform:none; }
+
+  /* ---------- герой ---------- */
+  .hero{
+    min-height:100vh;
+    min-height:100svh;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% 30%, var(--cream) 0%, var(--beige) 60%, var(--beige-2) 100%);
+    padding:70px 22px;
+  }
+  .hero .sprig-top{ width:190px; color:var(--green); margin:0 auto 8px; display:block; opacity:.9; }
+  .hero h1{
+    font-family:var(--font-head);
+    font-weight:500;
+    color:var(--green-deep);
+    font-size:clamp(2.6rem, 9vw, 4.6rem);
+    line-height:1.15;
+    letter-spacing:.02em;
+    margin:14px 0 6px;
+  }
+  .hero h1 .amp{
+    display:block;
+    font-style:italic;
+    color:var(--red);
+    font-size:.5em;
+    margin:6px 0;
+  }
+  .hero .date-line{
+    font-family:var(--font-head);
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    font-size:clamp(.72rem, 2.4vw, .92rem);
+    color:var(--red);
+    margin-top:24px;
+  }
+  .hero .place-line{
+    font-size:1.12rem;
+    color:var(--green);
+    margin-top:12px;
+    letter-spacing:.06em;
+  }
+  .scroll-hint{
+    position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
+    color:var(--green); opacity:.7;
+    animation:bob 2.4s ease-in-out infinite;
+  }
+  @keyframes bob{
+    0%,100%{ transform:translate(-50%,0); }
+    50%{ transform:translate(-50%,9px); }
+  }
+
+  /* ---------- текст приглашения ---------- */
+  .invite-card{
+    background:var(--cream);
+    border:1px solid rgba(185,154,91,.55);
+    box-shadow:0 0 0 6px rgba(185,154,91,.12);
+    padding:56px 42px;
+    text-align:center;
+  }
+  .invite-card p{ margin-bottom:16px; font-size:1.12rem; }
+  .invite-card p:last-child{ margin-bottom:0; }
+
+  /* ---------- фото пары ---------- */
+  .photo-arch{
+    position:relative;
+    width:min(430px, 88vw);
+    margin:52px auto 0;
+  }
+  .photo-arch .frame{
+    position:absolute; inset:-14px -14px -14px -14px;
+    border:1px solid var(--gold);
+    border-radius:50% 50% 10px 10px / 34% 34% 10px 10px;
+    pointer-events:none;
+  }
+  .photo-arch img{
+    display:block; width:100%; height:min(540px, 105vw);
+    object-fit:cover; object-position:center 30%;
+    border-radius:50% 50% 10px 10px / 34% 34% 10px 10px;
+    filter:saturate(.94);
+  }
+  .photo-cap{
+    text-align:center;
+    font-family:var(--font-script);
+    font-size:1.4rem;
+    color:var(--red);
+    margin-top:26px;
+  }
+
+  /* ---------- блок даты ---------- */
+  .date-big{
+    text-align:center;
+    margin-top:34px;
+  }
+  .date-big .num{
+    font-family:var(--font-head);
+    font-size:clamp(3.4rem, 14vw, 6rem);
+    line-height:1;
+    letter-spacing:.06em;
+    color:var(--cream);
+  }
+  .date-big .num em{ font-style:italic; color:#E8C9A0; }
+  .date-big .sub{
+    font-family:var(--font-head);
+    text-transform:uppercase;
+    letter-spacing:.36em;
+    font-size:.8rem;
+    margin-top:18px;
+    color:rgba(251,247,239,.8);
+  }
+  .gathering{
+    margin-top:38px;
+    padding-top:28px;
+    border-top:1px solid rgba(251,247,239,.25);
+    display:flex; justify-content:center; gap:14px; align-items:baseline;
+    flex-wrap:wrap;
+  }
+  .gathering .t{
+    font-family:var(--font-head);
+    font-size:2rem;
+    color:#E8C9A0;
+  }
+  .gathering .l{
+    font-family:var(--font-head);
+    text-transform:uppercase;
+    letter-spacing:.24em;
+    font-size:.78rem;
+    color:rgba(251,247,239,.85);
+  }
+
+  /* ---------- площадка ---------- */
+  .venue-photo{
+    position:relative;
+    margin:46px auto 0;
+    max-width:660px;
+  }
+  .venue-photo img{
+    display:block; width:100%;
+    aspect-ratio:16/10;
+    object-fit:cover;
+    border:1px solid rgba(185,154,91,.7);
+    filter:saturate(.95);
+  }
+  .venue-photo::after{
+    content:"";
+    position:absolute; inset:10px;
+    border:1px solid rgba(251,247,239,.55);
+    pointer-events:none;
+  }
+  .venue-info{ text-align:center; margin-top:38px; }
+  .venue-name{
+    font-family:var(--font-head);
+    font-size:2rem;
+    color:var(--green);
+    margin-bottom:8px;
+  }
+  .venue-addr{ font-size:1.1rem; color:var(--ink); }
+  .venue-info .btn{ margin-top:26px; }
+
+  /* ---------- программа ---------- */
+  .timeline{
+    margin-top:46px;
+    position:relative;
+    max-width:560px;
+    margin-left:auto; margin-right:auto;
+  }
+  .timeline::before{
+    content:"";
+    position:absolute; left:96px; top:8px; bottom:8px;
+    width:1px;
+    background:linear-gradient(var(--gold), var(--green-soft), var(--gold));
+  }
+  .t-item{
+    position:relative;
+    display:flex;
+    gap:26px;
+    padding:0 0 40px;
+  }
+  .t-item:last-child{ padding-bottom:0; }
+  .t-time{
+    width:74px;
+    flex:none;
+    text-align:right;
+    font-family:var(--font-head);
+    font-size:1.5rem;
+    color:var(--red);
+    line-height:1.2;
+  }
+  .t-body{
+    padding-left:22px;
+    flex:1;
+  }
+  .t-body h3{
+    font-family:var(--font-head);
+    font-weight:500;
+    font-size:1.2rem;
+    color:var(--green-deep);
+    letter-spacing:.03em;
+    margin-bottom:4px;
+  }
+  .t-body p{ font-size:1.02rem; color:#4A463D; }
+  .t-item::before{
+    content:"";
+    position:absolute;
+    left:91px; top:9px;
+    width:11px; height:11px;
+    background:var(--cream);
+    border:1px solid var(--green);
+    transform:rotate(45deg);
+  }
+
+  /* ---------- просьбы об одежде ---------- */
+  .wishes{
+    max-width:540px;
+    margin:36px auto 0;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .wish{
+    position:relative;
+    background:rgba(251,247,239,.1);
+    border:1px solid rgba(251,247,239,.3);
+    padding:17px 22px 17px 50px;
+    text-align:left;
+    font-size:1.06rem;
+    color:rgba(251,247,239,.95);
+  }
+  .wish::before{
+    content:"";
+    position:absolute;
+    left:23px; top:50%;
+    width:9px; height:9px;
+    border:1px solid #E8C9A0;
+    transform:translateY(-50%) rotate(45deg);
+  }
+  .wish b{ font-weight:600; color:#EFD9B6; }
+
+  /* ---------- опрос (RSVP) ---------- */
+  .rsvp-card, .rsvp-thanks{
+    background:var(--cream);
+    border:1px solid rgba(185,154,91,.55);
+    box-shadow:0 0 0 6px rgba(185,154,91,.12);
+    padding:48px 38px;
+    max-width:600px;
+    margin:44px auto 0;
+    text-align:center;
+  }
+  .field{ margin-bottom:30px; }
+  .field:last-of-type{ margin-bottom:24px; }
+  .field-label{
+    display:block;
+    font-family:var(--font-head);
+    text-transform:uppercase;
+    letter-spacing:.24em;
+    font-size:.7rem;
+    color:var(--red);
+    margin-bottom:14px;
+  }
+  #gName{
+    width:100%; max-width:400px;
+    padding:13px 18px;
+    font-family:var(--font-body);
+    font-size:1.05rem;
+    color:var(--ink);
+    text-align:center;
+    background:rgba(255,255,255,.65);
+    border:1px solid rgba(185,154,91,.6);
+    outline:none;
+    transition:border-color .3s;
+  }
+  #gName::placeholder{ color:#A9A294; font-style:italic; }
+  #gName:focus{ border-color:var(--green); }
+
+  #drinksSet{
+    border:none;
+    transition:opacity .35s;
+  }
+  #drinksSet.off{ opacity:.35; }
+
+  .chips{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+  .chip-input{
+    position:absolute;
+    width:1px; height:1px;
+    opacity:0;
+    pointer-events:none;
+  }
+  .chips label{
+    font-family:var(--font-head);
+    font-size:.92rem;
+    letter-spacing:.05em;
+    padding:10px 21px;
+    border:1px solid rgba(52,80,63,.45);
+    border-radius:999px;
+    cursor:pointer;
+    color:var(--green-deep);
+    background:rgba(255,255,255,.6);
+    transition:background .25s, color .25s, border-color .25s, transform .2s;
+    user-select:none;
+  }
+  .chips label:hover{ border-color:var(--green); background:#fff; transform:translateY(-1px); }
+  .chip-input:checked + label{
+    background:var(--green);
+    border-color:var(--green);
+    color:var(--cream);
+  }
+  .chip-input:focus-visible + label{
+    outline:2px solid var(--gold);
+    outline-offset:2px;
+  }
+
+  .rsvp-note{
+    margin-top:18px;
+    font-size:.94rem;
+    color:#6E695E;
+    font-style:italic;
+  }
+  .rsvp-msg{
+    display:block;
+    margin:22px auto;
+    max-width:420px;
+    white-space:pre-wrap;
+    background:rgba(52,80,63,.07);
+    border:1px dashed rgba(185,154,91,.75);
+    padding:20px 18px;
+    font-family:var(--font-body);
+    font-size:1.06rem;
+    line-height:1.7;
+    color:var(--ink);
+    text-align:center;
+  }
+  .rsvp-actions{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .rsvp-actions .btn{ text-decoration:none; }
+  .btn:disabled{
+    opacity:.55;
+    cursor:default;
+    transform:none;
+    background:var(--green);
+    border-color:var(--green);
+    color:var(--cream);
+  }
+  [hidden]{ display:none !important; }
+
+  /* ---------- финал ---------- */
+  .finale{ text-align:center; }
+  .finale .monogram{ margin-bottom:30px; background:rgba(34,54,43,.25); box-shadow:0 0 0 7px rgba(34,54,43,.25), 0 0 0 8px rgba(185,154,91,.35); color:var(--cream); }
+  .finale h2{ margin-bottom:18px; }
+  .finale .sign{
+    font-family:var(--font-script);
+    font-size:1.9rem;
+    color:#E8C9A0;
+    margin-top:34px;
+  }
+  .finale .contacts{
+    margin-top:26px;
+    font-size:.95rem;
+    color:rgba(251,247,239,.7);
+    letter-spacing:.06em;
+  }
+
+  /* ---------- музыка ---------- */
+  #musicBtn{
+    position:fixed;
+    right:20px; bottom:20px;
+    z-index:110;
+    width:56px; height:56px;
+    border-radius:50%;
+    background:var(--cream);
+    border:1px solid var(--gold);
+    color:var(--green);
+    cursor:pointer;
+    display:none;
+    align-items:center; justify-content:center;
+    box-shadow:0 6px 22px rgba(34,54,43,.28);
+    transition:transform .3s, background .3s, color .3s;
+  }
+  #musicBtn.show{ display:flex; }
+  #musicBtn:hover{ transform:scale(1.07); background:var(--green); color:var(--cream); }
+  #musicBtn svg{ width:22px; height:22px; }
+  #musicBtn .pause{ display:none; }
+  #musicBtn.playing .play{ display:none; }
+  #musicBtn.playing .pause{ display:block; }
+  #musicBtn.playing::after{
+    content:"";
+    position:absolute; inset:-6px;
+    border:1px solid rgba(52,80,63,.55);
+    border-radius:50%;
+    animation:pulse 2.2s ease-out infinite;
+  }
+  @keyframes pulse{
+    from{ transform:scale(.9); opacity:1; }
+    to{ transform:scale(1.35); opacity:0; }
+  }
+  @keyframes shake{
+    0%,100%{ transform:translateX(0); }
+    25%{ transform:translateX(-7px); }
+    50%{ transform:translateX(7px); }
+    75%{ transform:translateX(-4px); }
+  }
+
+  @media (max-width:560px){
+    body{ font-size:18px; }
+    section{ padding:66px 18px; }
+    .invite-card{ padding:40px 24px; }
+    .timeline::before{ left:74px; }
+    .t-item::before{ left:69px; }
+    .t-time{ width:56px; font-size:1.25rem; }
+    .t-body{ padding-left:18px; }
+    .intro-corner{ width:110px; }
+    .intro-corner.tl{ top:-84px; left:-58px; }
+    .intro-corner.tr{ top:-84px; right:-58px; }
+    .intro-corner.bl{ bottom:-84px; left:-58px; }
+    .intro-corner.br{ bottom:-84px; right:-58px; }
+    .monogram{ width:112px; height:112px; font-size:2rem; }
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ animation-duration:.01ms !important; transition-duration:.01ms !important; }
+    .reveal{ opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body class="locked">
+
+<canvas id="snow"></canvas>
+
+<!-- ================= ЗАСТАВКА ================= -->
+<div id="intro">
+  <div class="inner">
+    <svg class="intro-corner tl" viewBox="0 0 200 130" fill="none" aria-hidden="true">
+      <path d="M10 120 C60 108 118 82 172 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M34 112 L24 96"/><path d="M34 112 L50 118"/>
+        <path d="M58 104 L47 88"/><path d="M58 104 L74 110"/>
+        <path d="M82 94 L71 78"/><path d="M82 94 L98 100"/>
+        <path d="M106 82 L96 66"/><path d="M106 82 L122 88"/>
+        <path d="M130 68 L120 52"/><path d="M130 68 L146 74"/>
+        <path d="M152 52 L143 38"/><path d="M152 52 L167 57"/>
+      </g>
+      <g fill="#8E2F3C">
+        <circle cx="150" cy="86" r="6"/>
+        <circle cx="165" cy="94" r="5"/>
+        <circle cx="157" cy="101" r="5"/>
+      </g>
+      <path d="M126 96 C138 84 156 84 168 96 C156 108 138 108 126 96 Z" fill="currentColor" opacity=".85"/>
+      <path d="M130 96 L164 96" stroke="#F2EADB" stroke-width="1.2"/>
+    </svg>
+    <svg class="intro-corner tr" viewBox="0 0 200 130" fill="none" aria-hidden="true">
+      <path d="M10 120 C60 108 118 82 172 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M34 112 L24 96"/><path d="M34 112 L50 118"/>
+        <path d="M58 104 L47 88"/><path d="M58 104 L74 110"/>
+        <path d="M82 94 L71 78"/><path d="M82 94 L98 100"/>
+        <path d="M106 82 L96 66"/><path d="M106 82 L122 88"/>
+        <path d="M130 68 L120 52"/><path d="M130 68 L146 74"/>
+        <path d="M152 52 L143 38"/><path d="M152 52 L167 57"/>
+      </g>
+      <g fill="#8E2F3C">
+        <circle cx="150" cy="86" r="6"/>
+        <circle cx="165" cy="94" r="5"/>
+        <circle cx="157" cy="101" r="5"/>
+      </g>
+      <path d="M126 96 C138 84 156 84 168 96 C156 108 138 108 126 96 Z" fill="currentColor" opacity=".85"/>
+      <path d="M130 96 L164 96" stroke="#F2EADB" stroke-width="1.2"/>
+    </svg>
+    <svg class="intro-corner bl" viewBox="0 0 200 130" fill="none" aria-hidden="true">
+      <path d="M10 120 C60 108 118 82 172 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M34 112 L24 96"/><path d="M34 112 L50 118"/>
+        <path d="M58 104 L47 88"/><path d="M58 104 L74 110"/>
+        <path d="M82 94 L71 78"/><path d="M82 94 L98 100"/>
+        <path d="M106 82 L96 66"/><path d="M106 82 L122 88"/>
+        <path d="M130 68 L120 52"/><path d="M130 68 L146 74"/>
+        <path d="M152 52 L143 38"/><path d="M152 52 L167 57"/>
+      </g>
+      <g fill="#8E2F3C">
+        <circle cx="150" cy="86" r="6"/>
+        <circle cx="165" cy="94" r="5"/>
+        <circle cx="157" cy="101" r="5"/>
+      </g>
+      <path d="M126 96 C138 84 156 84 168 96 C156 108 138 108 126 96 Z" fill="currentColor" opacity=".85"/>
+      <path d="M130 96 L164 96" stroke="#F2EADB" stroke-width="1.2"/>
+    </svg>
+    <svg class="intro-corner br" viewBox="0 0 200 130" fill="none" aria-hidden="true">
+      <path d="M10 120 C60 108 118 82 172 30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <path d="M34 112 L24 96"/><path d="M34 112 L50 118"/>
+        <path d="M58 104 L47 88"/><path d="M58 104 L74 110"/>
+        <path d="M82 94 L71 78"/><path d="M82 94 L98 100"/>
+        <path d="M106 82 L96 66"/><path d="M106 82 L122 88"/>
+        <path d="M130 68 L120 52"/><path d="M130 68 L146 74"/>
+        <path d="M152 52 L143 38"/><path d="M152 52 L167 57"/>
+      </g>
+      <g fill="#8E2F3C">
+        <circle cx="150" cy="86" r="6"/>
+        <circle cx="165" cy="94" r="5"/>
+        <circle cx="157" cy="101" r="5"/>
+      </g>
+      <path d="M126 96 C138 84 156 84 168 96 C156 108 138 108 126 96 Z" fill="currentColor" opacity=".85"/>
+      <path d="M130 96 L164 96" stroke="#F2EADB" stroke-width="1.2"/>
+    </svg>
+
+    <div class="eyebrow">Приглашение на свадьбу</div>
+    <div class="monogram">Д<span>&amp;</span>Д</div>
+    <div class="intro-names">Дмитрий<br>и&nbsp;Дарья</div>
+    <div class="intro-date">5 декабря 2026</div>
+    <button class="btn" id="openBtn">Открыть приглашение</button>
+  </div>
+</div>
+
+<main>
+
+  <!-- ================= ГЕРОЙ ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <svg class="sprig-top" viewBox="0 0 240 70" fill="none" aria-hidden="true">
+        <path d="M20 46 C70 44 140 36 220 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+          <path d="M44 45 L36 32"/><path d="M44 45 L34 54"/>
+          <path d="M70 42 L62 29"/><path d="M70 42 L60 51"/>
+          <path d="M96 39 L88 26"/><path d="M96 39 L86 48"/>
+          <path d="M122 35 L114 22"/><path d="M122 35 L112 44"/>
+          <path d="M148 31 L140 18"/><path d="M148 31 L138 40"/>
+          <path d="M174 27 L166 14"/><path d="M174 27 L164 36"/>
+          <path d="M198 22 L191 10"/><path d="M198 22 L189 31"/>
+        </g>
+        <g fill="#8E2F3C">
+          <circle cx="204" cy="36" r="5.5"/>
+          <circle cx="217" cy="42" r="4.5"/>
+          <circle cx="211" cy="49" r="4.5"/>
+        </g>
+        <path d="M180 44 C191 33 208 33 219 44 C208 55 191 55 180 44 Z" fill="currentColor" opacity=".9"/>
+        <path d="M184 44 L215 44" stroke="#F2EADB" stroke-width="1.1"/>
+      </svg>
+
+      <div class="eyebrow">Мы женимся</div>
+      <h1>Дмитрий <span class="amp">&amp;</span> Дарья</h1>
+      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
+        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+        <path d="M104 8 L108 12 L104 16 L100 12 Z" fill="currentColor" opacity=".7"/>
+        <path d="M136 8 L140 12 L136 16 L132 12 Z" fill="currentColor" opacity=".7"/>
+      </svg>
+      <div class="date-line">5 декабря 2026 · суббота</div>
+      <div class="place-line">Усадьба «Масловых» · Свердловская область</div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+        <path d="M5 9 L12 16 L19 9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ================= ТЕКСТ ПРИГЛАШЕНИЯ ================= -->
+  <section class="bg-beige">
+    <div class="wrap">
+      <div class="invite-card reveal">
+        <span class="kicker">Дорогие родные и друзья</span>
+        <p>С огромной радостью приглашаем вас разделить с нами один из&nbsp;самых важных дней в&nbsp;нашей жизни&nbsp;— день, когда мы&nbsp;скрепим нашу любовь браком.</p>
+        <p>Пусть этот зимний вечер станет началом нашей общей истории, а&nbsp;ваше присутствие сделает его по-настоящему тёплым и&nbsp;незабываемым.</p>
+        <p class="script">Будем счастливы видеть вас рядом!</p>
+      </div>
+
+      <div class="photo-arch reveal">
+        <span class="frame"></span>
+        <img src="couple.jpg" alt="Дмитрий и Дарья">
+      </div>
+      <div class="photo-cap reveal">Дмитрий &amp; Дарья</div>
+    </div>
+  </section>
+
+  <!-- ================= ДАТА ================= -->
+  <section class="bg-green">
+    <div class="wrap">
+      <span class="kicker reveal">Сохраните дату</span>
+      <div class="date-big reveal">
+        <div class="num">05 <em>/</em> 12 <em>/</em> 2026</div>
+        <div class="sub">Суббота · начало зимы</div>
+      </div>
+      <div class="gathering reveal">
+        <span class="t">16:00</span>
+        <span class="l">Сбор гостей</span>
+      </div>
+      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true" style="margin-top:38px;">
+        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+      </svg>
+      <p class="lead reveal">Мы будем ждать вас в&nbsp;уютной усадьбе под&nbsp;еловым лесом&nbsp;— с&nbsp;гирляндами, горячим чаём и&nbsp;зимним настроением.</p>
+    </div>
+  </section>
+
+  <!-- ================= ПЛОЩАДКА ================= -->
+  <section class="bg-cream">
+    <div class="wrap">
+      <span class="kicker reveal">Место проведения</span>
+      <h2 class="reveal">Усадьба «Масловых»</h2>
+      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
+        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+      </svg>
+
+      <div class="venue-photo reveal">
+        <img src="usadba.jpg" alt="Усадьба Масловых">
+      </div>
+
+      <div class="venue-info reveal">
+        <div class="venue-name">Свердловская область</div>
+        <div class="venue-addr">село Фомино, улица 8&nbsp;Марта, 57</div>
+        <a class="btn ghost" href="https://yandex.ru/maps/?text=%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D1%81%D0%B5%D0%BB%D0%BE%20%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%208%20%D0%9C%D0%B0%D1%80%D1%82%D0%B0%2C%2057" target="_blank" rel="noopener">Открыть в картах</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ПРОГРАММА ================= -->
+  <section class="bg-beige">
+    <div class="wrap">
+      <span class="kicker reveal">Как пройдёт день</span>
+      <h2 class="reveal">Программа вечера</h2>
+      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
+        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+      </svg>
+
+      <div class="timeline">
+        <div class="t-item reveal">
+          <div class="t-time">16:00</div>
+          <div class="t-body">
+            <h3>Сбор гостей</h3>
+            <p>Встречаемся, знакомимся, тёплые напитки и&nbsp;первые объятия.</p>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-time">17:00</div>
+          <div class="t-body">
+            <h3>Церемония бракосочетания</h3>
+            <p>Самый трогательный момент вечера&nbsp;— обмен обетами.</p>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-time">18:00</div>
+          <div class="t-body">
+            <h3>Банкет</h3>
+            <p>Ужин, тосты, музыка и&nbsp;поздравления до&nbsp;позднего вечера.</p>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-time">23:00</div>
+          <div class="t-body">
+            <h3>Завершение вечера</h3>
+            <p>Нежное прощание с&nbsp;гостями и&nbsp;начало нашей общей дороги.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ДРЕСС-КОД ================= -->
+  <section class="bg-red">
+    <div class="wrap">
+      <span class="kicker reveal">Небольшая просьба</span>
+      <h2 class="reveal">Одежда на праздник</h2>
+      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true" style="color:#E8C9A0;">
+        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+      </svg>
+
+      <p class="lead reveal">Строгого дресс-кода у&nbsp;нас нет&nbsp;— наденьте то, в&nbsp;чём вам тепло, удобно и&nbsp;красиво. Однако будут две маленькие просьбы:</p>
+
+      <div class="wishes reveal">
+        <div class="wish">Женщинам&nbsp;—, пожалуйста, <b>не в&nbsp;белом</b>: белый цвет в&nbsp;этот день оставлен невесте</div>
+        <div class="wish">Мужчинам&nbsp;—, пожалуйста, <b>не&nbsp;в&nbsp;коричневом костюме</b></div>
+      </div>
+
+      <p class="script reveal" style="margin-top:30px;">Остальное — на ваш вкус и цвет!</p>
+    </div>
+  </section>
+
+  <!-- ================= ФИНАЛ ================= -->
+  <section class="bg-green finale">
+    <div class="wrap">
+      <div class="monogram reveal">Д<span>&amp;</span>Д</div>
+      <h2 class="reveal">До встречи 5 декабря!</h2>
+      <p class="lead reveal">Пожалуйста, ответьте на&nbsp;короткий опрос ниже&nbsp;— он&nbsp;займёт меньше минуты и&nbsp;поможет нам всё&nbsp;хорошо запланировать.</p>
+      <a class="btn light reveal" href="#rsvp" style="margin-top:26px;">Перейти к опросу</a>
+      <p class="script reveal">С любовью, Дмитрий и Дарья</p>
+      <div class="contacts reveal">
+        Дмитрий&nbsp;· +7&nbsp;900&nbsp;000-00-00 &nbsp;—&nbsp; Дарья&nbsp;· +7&nbsp;900&nbsp;000-00-00
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ОПРОС ================= -->
+  <section class="bg-beige" id="rsvp">
+    <div class="wrap">
+      <span class="kicker reveal">Ответ для невесты и жениха</span>
+      <h2 class="reveal">Сможете&nbsp;ли присутствовать?</h2>
+      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
+        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+      </svg>
+
+      <form class="rsvp-card reveal" id="rsvpForm" novalidate>
+        <div class="field">
+          <label class="field-label" for="gName">Ваше имя</label>
+          <input type="text" id="gName" name="name" placeholder="Например, Анна и Пётр Сидоровы" autocomplete="name">
+        </div>
+
+        <div class="field">
+          <span class="field-label">Сможете ли присутствовать?</span>
+          <div class="chips">
+            <input class="chip-input" type="radio" name="attend" id="attYes" value="Да, смогу" required>
+            <label for="attYes">С радостью смогу</label>
+            <input class="chip-input" type="radio" name="attend" id="attNo" value="Нет, к сожалению, не смогу">
+            <label for="attNo">К сожалению, не смогу</label>
+          </div>
+        </div>
+
+        <fieldset class="field" id="drinksSet">
+          <span class="field-label">Предпочтения по напиткам <span style="text-transform:none; letter-spacing:0; font-style:italic;">(можно выбрать несколько)</span></span>
+          <div class="chips">
+            <input class="chip-input" type="checkbox" id="dr1" name="drink" value="Вино белое">
+            <label for="dr1">Вино белое</label>
+            <input class="chip-input" type="checkbox" id="dr2" name="drink" value="Вино красное">
+            <label for="dr2">Вино красное</label>
+            <input class="chip-input" type="checkbox" id="dr3" name="drink" value="Шампанское">
+            <label for="dr3">Шампанское</label>
+            <input class="chip-input" type="checkbox" id="dr4" name="drink" value="Водка">
+            <label for="dr4">Водка</label>
+            <input class="chip-input" type="checkbox" id="dr5" name="drink" value="Коньяк">
+            <label for="dr5">Коньяк</label>
+            <input class="chip-input" type="checkbox" id="dr6" name="drink" value="Безалкогольные напитки">
+            <label for="dr6">Безалкогольные напитки</label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn rsvp-submit">Отправить ответ</button>
+        <p class="rsvp-note">Ответ будет отправлен Дмитрию и Дарье на почту</p>
+      </form>
+
+      <div class="rsvp-thanks" id="rsvpThanks" hidden>
+        <p class="script" id="thanksTitle" style="font-size:1.9rem;">Спасибо за ответ! ♥</p>
+        <p id="thanksText" style="margin-top:14px;">Ваш ответ готов — отправьте его нам:</p>
+        <pre class="rsvp-msg" id="rsvpMsg"></pre>
+        <div class="rsvp-actions">
+          <button class="btn" id="copyBtn" type="button">Скопировать ответ</button>
+          <a class="btn ghost" id="mailBtn" href="#" hidden>Написать письмом</a>
+          <button class="btn ghost" id="editBtn" type="button">Изменить ответ</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<button id="musicBtn" title="Включить / выключить музыку" aria-label="Музыка">
+  <svg class="play" viewBox="0 0 24 24" fill="none">
+    <path d="M9 18.5V6.2c0-.5.3-.9.8-1l8-1.7c.6-.1 1.2.4 1.2 1v11.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="6.6" cy="18.6" r="2.6" stroke="currentColor" stroke-width="1.7"/>
+    <circle cx="16.6" cy="16.4" r="2.6" stroke="currentColor" stroke-width="1.7"/>
+  </svg>
+  <svg class="pause" viewBox="0 0 24 24" fill="none">
+    <path d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<audio id="music" src="love-story-piano.mp3" loop preload="auto"></audio>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- заставка ---------- */
+  var intro = document.getElementById('intro');
+  var openBtn = document.getElementById('openBtn');
+  var musicBtn = document.getElementById('musicBtn');
+  var music = document.getElementById('music');
+
+  function tryPlay(){
+    var p = music.play();
+    if(p && p.then){
+      p.then(function(){ musicBtn.classList.add('playing'); })
+       .catch(function(){ musicBtn.classList.remove('playing'); });
+    } else {
+      musicBtn.classList.add('playing');
+    }
+  }
+
+  openBtn.addEventListener('click', function(){
+    intro.classList.add('hidden');
+    document.body.classList.remove('locked');
+    musicBtn.classList.add('show');
+    tryPlay();
+    setTimeout(function(){
+      var first = document.querySelector('.hero .wrap');
+      if(first){ /* ничего — просто плавный переход */ }
+    }, 300);
+  });
+
+  musicBtn.addEventListener('click', function(){
+    if(music.paused){ tryPlay(); }
+    else { music.pause(); musicBtn.classList.remove('playing'); }
+  });
+
+  /* ---------- появление блоков ---------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window && !reduceMotion){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold:0.16, rootMargin:'0px 0px -40px 0px' });
+    reveals.forEach(function(el){ io.observe(el); });
+  } else {
+    reveals.forEach(function(el){ el.classList.add('visible'); });
+  }
+
+  /* ---------- опрос ---------- */
+  var RSVP_CONFIG = {
+    emailKey: '',      /* ключ Web3Forms — вставить сюда */
+    notifyEmail: ''    /* почта Дмитрия и Дарьи — для кнопки «Написать письмом» */
+  };
+
+  var form = document.getElementById('rsvpForm');
+  var thanks = document.getElementById('rsvpThanks');
+  var thanksTitle = document.getElementById('thanksTitle');
+  var thanksText = document.getElementById('thanksText');
+  var msgEl = document.getElementById('rsvpMsg');
+  var drinksSet = document.getElementById('drinksSet');
+  var copyBtn = document.getElementById('copyBtn');
+  var mailBtn = document.getElementById('mailBtn');
+  var editBtn = document.getElementById('editBtn');
+  var submitBtn = form.querySelector('.rsvp-submit');
+  var lastText = '';
+
+  function updateDrinks(){
+    var no = document.getElementById('attNo').checked;
+    drinksSet.disabled = no;
+    drinksSet.className = no ? 'field off' : 'field';
+    if(no){
+      var checked = drinksSet.querySelectorAll('input:checked');
+      for(var i = 0; i < checked.length; i++){ checked[i].checked = false; }
+    }
+  }
+
+  form.addEventListener('change', function(e){
+    if(e.target.name === 'attend'){ updateDrinks(); }
+  });
+
+  function showThanks(sent){
+    if(sent){
+      thanksTitle.textContent = 'Спасибо, ответ отправлен! ♥';
+      thanksText.textContent = 'Мы получили ваш ответ — очень ждём вас на празднике.';
+      copyBtn.hidden = true;
+      mailBtn.hidden = true;
+      editBtn.hidden = true;
+    } else {
+      thanksTitle.textContent = 'Спасибо за ответ! ♥';
+      thanksText.textContent = 'Отправить автоматически не удалось — скопируйте ответ или отправьте письмом:';
+      copyBtn.hidden = false;
+      editBtn.hidden = false;
+      mailBtn.hidden = !RSVP_CONFIG.notifyEmail;
+      mailBtn.href = 'mailto:' + RSVP_CONFIG.notifyEmail
+        + '?subject=' + encodeURIComponent('Ответ на свадьбу Дмитрия и Дарьи')
+        + '&body=' + encodeURIComponent(lastText);
+    }
+    msgEl.textContent = lastText;
+    form.hidden = true;
+    thanks.hidden = false;
+    thanks.scrollIntoView({ behavior:'smooth', block:'center' });
+  }
+
+  function sendToEmail(){
+    return fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        access_key: RSVP_CONFIG.emailKey,
+        subject: document.getElementById('gName').value.trim()
+          ? 'Ответ на свадьбу: ' + document.getElementById('gName').value.trim()
+          : 'Ответ на свадьбу Дмитрия и Дарьи',
+        from_name: 'Свадебное приглашение',
+        botcheck: '',
+        message: lastText
+      })
+    }).then(function(resp){ return resp.json(); }).then(function(res){
+      return !!(res && (res.success === true || res.success === 'true'));
+    });
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!document.getElementById('attYes').checked && !document.getElementById('attNo').checked){
+      var firstAtt = document.getElementById('attYes');
+      firstAtt.focus();
+      firstAtt.parentNode.style.animation = 'shake .4s';
+      setTimeout(function(){ firstAtt.parentNode.style.animation = ''; }, 500);
+      return;
+    }
+
+    var name = document.getElementById('gName').value.trim() || 'Гость';
+    var going = document.getElementById('attYes').checked;
+    var drinks = [];
+    var checkedDrinks = drinksSet.querySelectorAll('input:checked');
+    for(var i = 0; i < checkedDrinks.length; i++){ drinks.push(checkedDrinks[i].value); }
+
+    lastText = 'Приглашение на свадьбу Дмитрия и Дарьи — 5 декабря 2026\n'
+      + 'Гость: ' + name + '\n'
+      + 'Смогу присутствовать: ' + (going ? 'да' : 'нет') + '\n'
+      + (going ? 'Напитки: ' + (drinks.length ? drinks.join(', ') : 'не указаны') : '');
+
+    try{
+      localStorage.setItem('wedding-rsvp-05-12-2026', JSON.stringify({ name:name, going:going, drinks:drinks }));
+    }catch(err){}
+
+    if(!RSVP_CONFIG.emailKey){
+      showThanks(false);
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправляем…';
+
+    var done = function(ok){
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Отправить ответ';
+      showThanks(ok);
+    };
+    sendToEmail().then(done).catch(function(){ done(false); });
+  });
+
+  function copyDone(){
+    copyBtn.textContent = 'Скопировано ✓';
+    setTimeout(function(){ copyBtn.textContent = 'Скопировать ответ'; }, 2400);
+  }
+
+  function fallbackCopy(){
+    var ta = document.createElement('textarea');
+    ta.value = lastText;
+    ta.style.position = 'fixed';
+    ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select();
+    try{ document.execCommand('copy'); copyDone(); }
+    catch(err){ copyBtn.textContent = 'Выделите текст выше'; }
+    document.body.removeChild(ta);
+  }
+
+  copyBtn.addEventListener('click', function(){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(lastText).then(copyDone).catch(fallbackCopy);
+    } else {
+      fallbackCopy();
+    }
+  });
+
+  editBtn.addEventListener('click', function(){
+    thanks.hidden = true;
+    form.hidden = false;
+    form.scrollIntoView({ behavior:'smooth', block:'center' });
+  });
+
+  /* ---------- снег ---------- */
+  var canvas = document.getElementById('snow');
+  var ctx = canvas.getContext('2d');
+  var flakes = [], W = 0, H = 0, raf = null;
+
+  function resize(){
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+
+  function makeFlakes(){
+    flakes = [];
+    var count = Math.min(90, Math.round(W / 16));
+    for(var i = 0; i < count; i++){
+      flakes.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: 0.8 + Math.random() * 2.4,
+        s: 0.25 + Math.random() * 0.75,
+        d: Math.random() * Math.PI * 2,
+        w: 0.004 + Math.random() * 0.012,
+        a: 0.35 + Math.random() * 0.5
+      });
+    }
+  }
+
+  function draw(){
+    ctx.clearRect(0, 0, W, H);
+    for(var i = 0; i < flakes.length; i++){
+      var f = flakes[i];
+      f.d += f.w;
+      f.y += f.s;
+      f.x += Math.sin(f.d) * 0.45;
+      if(f.y - f.r > H){ f.y = -4; f.x = Math.random() * W; }
+      if(f.x < -6) f.x = W + 6;
+      if(f.x > W + 6) f.x = -6;
+      ctx.beginPath();
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,255,255,' + f.a + ')';
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+
+  if(!reduceMotion){
+    resize(); makeFlakes(); draw();
+    window.addEventListener('resize', function(){ resize(); makeFlakes(); });
+    document.addEventListener('visibilitychange', function(){
+      if(document.hidden){ if(raf){ cancelAnimationFrame(raf); raf = null; } }
+      else if(!raf){ draw(); }
+    });
+  } else {
+    canvas.style.display = 'none';
+  }
+})();
+</script>
+</body>
+</html>
