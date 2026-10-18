@@ -256,12 +256,27 @@
     font-size:clamp(.72rem, 2.4vw, .92rem);
     color:#E8C9A0;
     margin-top:24px;
+    white-space:nowrap;
   }
   .hero .place-line{
     font-size:1.12rem;
     color:rgba(251,247,239,.88);
     margin-top:12px;
     letter-spacing:.06em;
+  }
+  .hero-hearts{
+    display:block;
+    width:118px;
+    margin:0 auto 16px;
+    transform-origin:50% 70%;
+    animation:heartPulse 3.6s ease-in-out infinite;
+  }
+  @keyframes heartPulse{
+    0%,100%{ transform:scale(1); }
+    8%{ transform:scale(1.07); }
+    16%{ transform:scale(1); }
+    26%{ transform:scale(1.045); }
+    36%{ transform:scale(1); }
   }
   .scroll-hint{
     position:absolute; bottom:26px; left:50%; transform:translateX(-50%);
@@ -279,6 +294,7 @@
     color:var(--ink);
     border:1px solid rgba(185,154,91,.55);
     box-shadow:0 0 0 6px rgba(185,154,91,.12);
+    border-radius:24px;
     padding:56px 42px;
     text-align:center;
   }
@@ -320,10 +336,11 @@
   }
   .date-big .num{
     font-family:var(--font-head);
-    font-size:clamp(3.4rem, 14vw, 6rem);
+    font-size:clamp(2.5rem, 11vw, 6rem);
     line-height:1;
     letter-spacing:.06em;
     color:var(--cream);
+    white-space:nowrap;
   }
   .date-big .num em{ font-style:italic; color:#E8C9A0; }
   .date-big .sub{
@@ -355,15 +372,27 @@
   }
 
   /* ---------- площадка ---------- */
-  .venue-info{ text-align:center; margin-top:14px; }
+  .venue-card{
+    background:var(--cream);
+    color:var(--ink);
+    border:1px solid rgba(185,154,91,.55);
+    box-shadow:0 0 0 6px rgba(185,154,91,.12);
+    border-radius:24px;
+    padding:54px 38px;
+    margin-top:40px;
+    text-align:center;
+  }
+  .venue-card h2{ color:var(--red); }
+  .venue-card .divider{ color:var(--gold); margin:20px auto 24px; }
   .venue-name{
     font-family:var(--font-head);
-    font-size:2rem;
-    color:var(--cream);
+    font-size:1.5rem;
+    color:var(--red-deep);
+    letter-spacing:.04em;
     margin-bottom:8px;
   }
-  .venue-addr{ font-size:1.1rem; color:rgba(251,247,239,.9); }
-  .venue-info .btn{ margin-top:26px; }
+  .venue-addr{ font-size:1.15rem; color:var(--ink); }
+  .venue-card .btn{ margin-top:28px; }
 
   /* ---------- программа ---------- */
   .timeline{
@@ -444,12 +473,70 @@
   }
   .wish b{ font-weight:600; color:#EFD9B6; }
 
+  /* ---------- подарок ---------- */
+  .gift-card{
+    position:relative;
+    max-width:640px;
+    margin:40px auto 0;
+    padding:48px 44px;
+    border-radius:28px;
+    text-align:center;
+    background:rgba(251,247,239,.10);
+    border:1px solid rgba(232,201,160,.5);
+    box-shadow:0 14px 44px rgba(64,10,20,.28), inset 0 0 34px rgba(251,247,239,.07);
+  }
+  .gift-card::before{
+    content:"";
+    position:absolute; inset:8px;
+    border-radius:21px;
+    border:1px dotted rgba(251,247,239,.35);
+    pointer-events:none;
+  }
+  .gift-card .script{ color:#E8C9A0; }
+  .gift-card .divider{ color:rgba(232,201,160,.8); margin:26px auto; max-width:100%; }
+  .gift-main{ margin-top:18px; }
+  .gift-main b{ color:#E8C9A0; font-weight:600; }
+  .gift-row{
+    display:flex;
+    align-items:center;
+    gap:26px;
+    text-align:left;
+  }
+  .gift-text{ flex:1; min-width:0; }
+  .gift-row .script{ text-align:left; margin-bottom:8px; }
+  .gift-sub{
+    font-size:1.05rem;
+    line-height:1.65;
+    color:rgba(251,247,239,.9);
+  }
+  .gift-bottle{
+    flex:0 0 auto;
+    display:block;
+    width:92px;
+    margin:0;
+    transform-origin:50% 92%;
+    animation:bottleSway 7s ease-in-out infinite;
+  }
+  @keyframes bottleSway{
+    0%,100%{ transform:rotate(-1.6deg); }
+    50%{ transform:rotate(1.6deg); }
+  }
+  .gift-dress-title{
+    font-family:var(--font-head);
+    font-size:1.4rem;
+    letter-spacing:.05em;
+    color:var(--cream);
+    margin-bottom:14px;
+  }
+  .gift-finish{ margin-top:26px; }
+
   /* ---------- опрос (RSVP) ---------- */
   .rsvp-card, .rsvp-thanks{
     background:var(--cream);
     color:var(--ink);
     border:1px solid rgba(185,154,91,.55);
     box-shadow:0 0 0 6px rgba(185,154,91,.12);
+    border-radius:24px;
     padding:48px 38px;
     max-width:600px;
     margin:44px auto 0;
@@ -632,6 +719,14 @@
   @media (max-width:560px){
     body{ font-size:18px; padding:0 34px; }
     .lace-edge{ width:34px; background-size:34px 59px; }
+    .date-big .num{ font-size:min(9vw, 6rem); }
+    .hero .date-line{ font-size:clamp(.55rem, 3.2vw, .92rem); letter-spacing:.18em; }
+    .gift-card{ padding:38px 22px; }
+    .gift-row{ gap:14px; }
+    .gift-bottle{ width:64px; }
+    .gift-row .script{ font-size:1.28rem; }
+    .gift-sub{ font-size:.95rem; }
+    .gift-dress-title{ font-size:1.22rem; }
     section{ padding:66px 18px; }
     .invite-card{ padding:40px 24px; }
     .timeline::before{ left:74px; }
@@ -843,6 +938,19 @@
   <!-- ================= ГЕРОЙ ================= -->
   <section class="hero">
     <div class="wrap">
+      <svg class="hero-hearts" viewBox="0 0 132 64" fill="none" aria-hidden="true">
+        <g stroke-linecap="round" stroke-linejoin="round">
+          <g transform="translate(4,10) rotate(-8 45 40) scale(0.6)">
+            <path d="M45 78 C45 78 4 48 4 26 C4 11 15 3 27 3 C35 3 42 8 45 15 C48 8 55 3 63 3 C75 3 86 11 86 26 C86 48 45 78 45 78 Z" stroke="#FBF7EF" stroke-width="3.2"/>
+          </g>
+          <g transform="translate(58,4) rotate(8 45 40) scale(0.68)">
+            <path d="M45 78 C45 78 4 48 4 26 C4 11 15 3 27 3 C35 3 42 8 45 15 C48 8 55 3 63 3 C75 3 86 11 86 26 C86 48 45 78 45 78 Z" stroke="#E8C9A0" stroke-width="2.9"/>
+          </g>
+          <circle cx="70" cy="13" r="1.5" fill="#E8C9A0" fill-opacity=".85" stroke="none"/>
+          <circle cx="15" cy="29" r="1.4" fill="#FBF7EF" fill-opacity=".7" stroke="none"/>
+          <circle cx="125" cy="33" r="1.4" fill="#FBF7EF" fill-opacity=".7" stroke="none"/>
+        </g>
+      </svg>
       <div class="eyebrow">Мы женимся</div>
       <h1>Дмитрий <span class="amp">&amp;</span> Дарья</h1>
       <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
@@ -874,7 +982,7 @@
 
       <div class="photo-arch reveal">
         <span class="frame"></span>
-        <img src="couple.jpg" alt="Дмитрий и Дарья">
+        <img src="couple.jpg?v=2" alt="Дмитрий и Дарья">
       </div>
       <div class="photo-cap reveal">Дмитрий &amp; Дарья</div>
     </div>
@@ -886,50 +994,19 @@
       <span class="kicker reveal">Сохраните дату</span>
       <div class="date-big reveal">
         <div class="num">05 <em>/</em> 12 <em>/</em> 2026</div>
-        <div class="sub">Суббота · начало зимы</div>
+        <div class="sub">Суббота</div>
       </div>
       <div class="gathering reveal">
+        <span class="l">Начало мероприятия в</span>
         <span class="t">16:00</span>
-        <span class="l">Сбор гостей</span>
       </div>
+      <p class="lead reveal">Мы будем ждать вас в&nbsp;уютной усадьбе под&nbsp;еловым лесом&nbsp;— с&nbsp;гирляндами, горячим чаём и&nbsp;зимним настроением.</p>
       <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true" style="margin-top:38px;">
         <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
         <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
         <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
       </svg>
-      <p class="lead reveal">Мы будем ждать вас в&nbsp;уютной усадьбе под&nbsp;еловым лесом&nbsp;— с&nbsp;гирляндами, горячим чаём и&nbsp;зимним настроением.</p>
-    </div>
-  </section>
-
-  <!-- ================= ПЛОЩАДКА ================= -->
-  <section class="bg-cream">
-    <div class="wrap">
-      <span class="kicker reveal">Место проведения</span>
-      <h2 class="reveal">Усадьба «Масловых»</h2>
-      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
-        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
-        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
-        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
-      </svg>
-
-      <div class="venue-info reveal">
-        <div class="venue-name">Свердловская область</div>
-        <div class="venue-addr">село Фомино, улица 8&nbsp;Марта, 57</div>
-        <a class="btn light" href="https://yandex.ru/maps/?text=%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D1%81%D0%B5%D0%BB%D0%BE%20%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%208%20%D0%9C%D0%B0%D1%80%D1%82%D0%B0%2C%2057" target="_blank" rel="noopener">Открыть в картах</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ПРОГРАММА ================= -->
-  <section class="bg-beige">
-    <div class="wrap">
-      <span class="kicker reveal">Как пройдёт день</span>
       <h2 class="reveal">Программа вечера</h2>
-      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
-        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
-        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
-        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
-      </svg>
 
       <div class="timeline">
         <div class="t-item reveal">
@@ -947,10 +1024,17 @@
           </div>
         </div>
         <div class="t-item reveal">
-          <div class="t-time">18:00</div>
+          <div class="t-time">17:30</div>
           <div class="t-body">
             <h3>Банкет</h3>
-            <p>Ужин, тосты, музыка и&nbsp;поздравления до&nbsp;позднего вечера.</p>
+            <p>Ужин, тосты, музыка и&nbsp;поздравления.</p>
+          </div>
+        </div>
+        <div class="t-item reveal">
+          <div class="t-time">21:30</div>
+          <div class="t-body">
+            <h3>Торт</h3>
+            <p>Сладкий момент: торт, фотосессия и&nbsp;самые тёплые пожелания.</p>
           </div>
         </div>
         <div class="t-item reveal">
@@ -964,25 +1048,80 @@
     </div>
   </section>
 
-  <!-- ================= ПРОСЬБЫ ОБ ОДЕЖДЕ ================= -->
-  <section class="bg-green">
+  <!-- ================= ПЛОЩАДКА ================= -->
+  <section class="bg-cream">
     <div class="wrap">
-      <span class="kicker reveal">Небольшая просьба</span>
-      <h2 class="reveal">Одежда на праздник</h2>
-      <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true" style="color:#E8C9A0;">
-        <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
-        <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
-        <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
-      </svg>
+      <span class="kicker reveal">Место проведения</span>
 
-      <p class="lead reveal">Строгого дресс-кода у&nbsp;нас нет&nbsp;— наденьте то, в&nbsp;чём вам тепло, удобно и&nbsp;красиво. Однако будут две маленькие просьбы:</p>
-
-      <div class="wishes reveal">
-        <div class="wish">Женщинам&nbsp;—, пожалуйста, <b>не в&nbsp;белом</b>: белый цвет в&nbsp;этот день оставлен невесте</div>
-        <div class="wish">Мужчинам&nbsp;—, пожалуйста, <b>не&nbsp;в&nbsp;коричневом костюме</b></div>
+      <div class="venue-card reveal">
+        <h2>Усадьба «Масловых»</h2>
+        <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
+          <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+          <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+          <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+        </svg>
+        <div class="venue-name">Свердловская область</div>
+        <div class="venue-addr">село Фомино, улица 8&nbsp;Марта, 57</div>
+        <a class="btn" href="https://yandex.ru/maps/?text=%D0%A1%D0%B2%D0%B5%D1%80%D0%B4%D0%BB%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%20%D1%81%D0%B5%D0%BB%D0%BE%20%D0%A4%D0%BE%D0%BC%D0%B8%D0%BD%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%208%20%D0%9C%D0%B0%D1%80%D1%82%D0%B0%2C%2057" target="_blank" rel="noopener">Открыть в картах</a>
       </div>
+    </div>
+  </section>
 
-      <p class="script reveal" style="margin-top:30px;">Остальное — на ваш вкус и цвет!</p>
+  <!-- ================= ДЕТАЛИ ================= -->
+  <section class="bg-beige">
+    <div class="wrap">
+      <div class="gift-card reveal">
+        <span class="kicker">Детали</span>
+
+        <p class="lead gift-main">Ваше хорошее настроение подарит нам счастье в&nbsp;этот день. А&nbsp;если вы решите порадовать подарком&nbsp;— будем благодарны за&nbsp;<b>денежный вклад</b>: он&nbsp;станет первым вложением в&nbsp;нашу семейную жизнь.</p>
+
+        <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
+          <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+          <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+          <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+        </svg>
+
+        <div class="gift-row">
+          <div class="gift-text">
+            <p class="script">Вместо цветов — бутылка вина</p>
+            <p class="gift-sub">Если захотите порадовать букетом&nbsp;— замените, пожалуйста, бутылкой вашего любимого вина. Она займёт почётное место в&nbsp;нашей домашней винотеке.</p>
+          </div>
+          <svg class="gift-bottle" viewBox="0 0 140 232" fill="none" aria-hidden="true">
+          <g transform="rotate(-2 70 160)" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M60 27 Q60 23 64 23 L76 23 Q80 23 80 27 L80 55 L60 55 Z" stroke="#E8C9A0" stroke-width="1.8"/>
+            <path d="M60 34 H80" stroke="#E8C9A0" stroke-width="1.2"/>
+            <path d="M60 47 H80" stroke="#E8C9A0" stroke-width="1.2"/>
+            <path d="M63 55 L63 88 C63 108 42 108 42 134 L42 204 Q42 211 49 211 L91 211 Q98 211 98 204 L98 134 C98 108 77 108 77 88 L77 55" stroke="#FBF7EF" stroke-width="2"/>
+            <path d="M48 142 C46 160, 46 180, 48 194" stroke="rgba(251,247,239,.55)" stroke-width="1.4"/>
+            <path d="M50 144 Q50 140 54 140 L86 140 Q90 140 90 144 L90 182 Q90 186 86 186 L54 186 Q50 186 50 182 Z" stroke="#E8C9A0" stroke-width="1.5"/>
+            <path d="M70 148 L75 157 L70 166 L65 157 Z" fill="#E8C9A0" fill-opacity=".85" stroke="none"/>
+            <path d="M58 174 H82" stroke="#FBF7EF" stroke-width="1.2" opacity=".8"/>
+            <path d="M62 180 H78" stroke="#FBF7EF" stroke-width="1.2" opacity=".6"/>
+            <path d="M26 58 l1.8 4.6 4.6 1.8 -4.6 1.8 -1.8 4.6 -1.8 -4.6 -4.6 -1.8 4.6 -1.8 Z" fill="#E8C9A0" fill-opacity=".9" stroke="none"/>
+            <path d="M114 96 l1.4 3.6 3.6 1.4 -3.6 1.4 -1.4 3.6 -1.4 -3.6 -3.6 -1.4 3.6 -1.4 Z" fill="#E8C9A0" fill-opacity=".75" stroke="none"/>
+            <circle cx="118" cy="52" r="1.6" fill="#FBF7EF" fill-opacity=".7"/>
+            <circle cx="22" cy="108" r="1.6" fill="#FBF7EF" fill-opacity=".7"/>
+            <path d="M48 219 Q70 224 92 219" stroke="rgba(232,201,160,.5)" stroke-width="1.4"/>
+          </g>
+          </svg>
+        </div>
+
+        <svg class="divider" viewBox="0 0 240 24" fill="none" aria-hidden="true">
+          <path d="M0 12 H94" stroke="currentColor" stroke-width="1"/>
+          <path d="M146 12 H240" stroke="currentColor" stroke-width="1"/>
+          <path d="M120 3 L129 12 L120 21 L111 12 Z" fill="currentColor"/>
+        </svg>
+
+        <p class="gift-dress-title">Небольшая просьба по дресс-коду</p>
+        <p class="lead">Строгого дресс-кода у&nbsp;нас нет&nbsp;— наденьте то, в&nbsp;чём вам тепло, удобно и&nbsp;красиво. Однако будут две маленькие просьбы:</p>
+
+        <div class="wishes">
+          <div class="wish">Женщинам&nbsp;—, пожалуйста, <b>не в&nbsp;белом</b>: белый цвет в&nbsp;этот день оставлен невесте</div>
+          <div class="wish">Мужчинам&nbsp;—, пожалуйста, <b>не&nbsp;в&nbsp;коричневом костюме</b></div>
+        </div>
+
+        <p class="script gift-finish">Остальное — на ваш вкус и цвет!</p>
+      </div>
     </div>
   </section>
 
@@ -990,15 +1129,12 @@
   <section class="bg-red finale">
     <div class="wrap">
       <div class="finale-photo reveal">
-        <img src="couple2.jpg" alt="Дмитрий и Дарья">
+        <img src="couple2.jpg?v=2" alt="Дмитрий и Дарья">
       </div>
       <h2 class="reveal">До встречи 5 декабря!</h2>
       <p class="lead reveal">Пожалуйста, ответьте на&nbsp;короткий опрос ниже&nbsp;— он&nbsp;займёт меньше минуты и&nbsp;поможет нам всё&nbsp;хорошо запланировать.</p>
       <a class="btn light reveal" href="#rsvp" style="margin-top:26px;">Перейти к опросу</a>
       <p class="script reveal">С любовью, Дмитрий и Дарья</p>
-      <div class="contacts reveal">
-        Дмитрий&nbsp;· +7&nbsp;900&nbsp;000-00-00 &nbsp;—&nbsp; Дарья&nbsp;· +7&nbsp;900&nbsp;000-00-00
-      </div>
     </div>
   </section>
 
