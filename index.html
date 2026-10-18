@@ -326,7 +326,8 @@
     font-family:var(--font-script);
     font-size:1.4rem;
     color:#E8C9A0;
-    margin-top:26px;
+    max-width:540px;
+    margin:26px auto 0;
   }
 
   /* ---------- блок даты ---------- */
@@ -351,6 +352,51 @@
     margin-top:18px;
     color:rgba(251,247,239,.8);
   }
+  /* ---------- календарь недели ---------- */
+  .week-cal{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    max-width:460px;
+    margin:8px auto 0;
+  }
+  .wc-day{
+    position:relative;
+    flex:1 1 0;
+    max-width:56px;
+    padding:14px 0 12px;
+    text-align:center;
+    border:1px solid transparent;
+    border-radius:14px;
+  }
+  .wc-w{
+    display:block;
+    font-size:.72rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:rgba(251,247,239,.55);
+    margin-bottom:6px;
+  }
+  .wc-d{
+    display:block;
+    font-family:var(--font-head);
+    font-size:1.4rem;
+    color:rgba(251,247,239,.9);
+  }
+  .wc-here{
+    border-color:rgba(232,201,160,.55);
+    background:rgba(251,247,239,.1);
+  }
+  .wc-here .wc-w{ color:#E8C9A0; }
+  .wc-here .wc-d{ color:#E8C9A0; font-size:1.55rem; }
+  .wc-heart{
+    position:absolute;
+    top:-12px; left:50%;
+    width:22px; height:20px;
+    margin-left:-11px;
+    filter:drop-shadow(0 2px 4px rgba(64,10,20,.35));
+  }
+
   .gathering{
     margin-top:38px;
     padding-top:28px;
@@ -720,6 +766,12 @@
     body{ font-size:18px; padding:0 34px; }
     .lace-edge{ width:34px; background-size:34px 59px; }
     .date-big .num{ font-size:min(9vw, 6rem); }
+    .week-cal{ gap:4px; }
+    .wc-day{ padding:12px 0 10px; max-width:none; }
+    .wc-w{ font-size:.6rem; letter-spacing:.1em; }
+    .wc-d{ font-size:1.15rem; }
+    .wc-here .wc-d{ font-size:1.3rem; }
+    .wc-heart{ width:18px; height:17px; margin-left:-9px; top:-10px; }
     .hero .date-line{ font-size:clamp(.55rem, 3.2vw, .92rem); letter-spacing:.18em; }
     .gift-card{ padding:38px 22px; }
     .gift-row{ gap:14px; }
@@ -962,7 +1014,7 @@
         <path d="M136 8 L140 12 L136 16 L132 12 Z" fill="currentColor" opacity=".7"/>
       </svg>
       <div class="date-line">5 декабря 2026 · суббота</div>
-      <div class="place-line">Усадьба «Масловых» · Свердловская область</div>
+      <div class="place-line">Усадьба «Масловых»</div>
     </div>
     <div class="scroll-hint" aria-hidden="true">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
@@ -983,9 +1035,9 @@
 
       <div class="photo-arch reveal">
         <span class="frame"></span>
-        <img src="couple.jpg?v=2" alt="Дмитрий и Дарья">
+        <img src="couple.jpg?v=3" alt="Дмитрий и Дарья">
       </div>
-      <div class="photo-cap reveal">Дмитрий &amp; Дарья</div>
+      <div class="photo-cap reveal">Наша первая совместная фотография&nbsp;— 7&nbsp;лет назад. С неё и началась наша история.</div>
     </div>
   </section>
 
@@ -993,6 +1045,20 @@
   <section class="bg-red">
     <div class="wrap">
       <span class="kicker reveal">Сохраните дату</span>
+      <div class="week-cal reveal" aria-label="Неделя свадьбы: с 30 ноября по 6 декабря 2026 года">
+        <div class="wc-day"><span class="wc-w">Пн</span><span class="wc-d">30</span></div>
+        <div class="wc-day"><span class="wc-w">Вт</span><span class="wc-d">1</span></div>
+        <div class="wc-day"><span class="wc-w">Ср</span><span class="wc-d">2</span></div>
+        <div class="wc-day"><span class="wc-w">Чт</span><span class="wc-d">3</span></div>
+        <div class="wc-day"><span class="wc-w">Пт</span><span class="wc-d">4</span></div>
+        <div class="wc-day wc-here">
+          <svg class="wc-heart" viewBox="0 0 24 22" fill="none" aria-hidden="true">
+            <path d="M12 21 C12 21 1.5 13.8 1.5 7.1 C1.5 3 4.6 0.6 8 0.6 C10.2 0.6 11.4 1.8 12 3.3 C12.6 1.8 13.8 0.6 16 0.6 C19.4 0.6 22.5 3 22.5 7.1 C22.5 13.8 12 21 12 21 Z" fill="#E8C9A0"/>
+          </svg>
+          <span class="wc-w">Сб</span><span class="wc-d">5</span>
+        </div>
+        <div class="wc-day"><span class="wc-w">Вс</span><span class="wc-d">6</span></div>
+      </div>
       <div class="date-big reveal">
         <div class="num">05 <em>/</em> 12 <em>/</em> 2026</div>
         <div class="sub">Суббота</div>
